@@ -1,0 +1,119 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 v2.7
+\b0 \
+\
+Minor UI layout bug fix in the messenger\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b \cf0 v2.6\
+\
+
+\b0 Just some minor changements concerning the keys.\
+\
+
+\b v2.5\
+\
+
+\b0 Minor bug fixes. 
+\b Added a first beta version of the android project
+\b0 .\
+\
+
+\b v2.4\
+\
+
+\b0 Minor bug fixes. The video mixing bug has been addressed, but there is still a small design bug that needs to be fixed. Also, a bug in the follower view has been fixed.\
+\
+
+\b v2.3
+\b0 \
+\
+Minor bug fixes concerning layout and deleting chats.\
+\
+
+\b v2.2\
+\
+
+\b0 Another fix concerning the follower view.\
+
+\b \
+v2.1\
+
+\b0 \
+Minor bug fix concerning the follower view\
+\
+
+\b v2.0\
+\
+
+\b0 \'95 Introducing a new follower and following view, and fixing several bugs. \
+\'95 Parse currently has a bug in their javascript sdk, so make sure you don\'92t use their latest sdk with your cloud code. Instead, make sure you use \'841.4.2\'93 in the global.json file. \
+\'95 Updating the project to XCode 7 and making it iOS9 ready. Please do not use XCode6 nor iOS8 anymore.\
+\'95 Fixing the profile picture swapping bug (be aware that the fix only applies to newly registered users, existing users simply should upload their own profile picture\'85)\
+\'95 Fixing a bug with cropping images on the iPad version of the project
+\b \
+\
+IMPORTANT: 
+\b0  this version provides an update to the cloud code folder. I introduced a new background job you better run every day on your parse account. Just set it to run every day on 00:00 and parse will do the rest for you. This background job cleans the data up and deletes all the corrupted follow activities. \
+
+\b \
+v1.7.4
+\b0 \
+\
+Minor update fixing a few warnings in the code. Using XCode6.4, you should no have no warnings when opening the project.\
+\
+
+\b v1.7.3\
+\
+
+\b0 Fixing two minor bugs. \
+\
+Concerning the changing of the passwords for non-Facebook users - there has been a bug due to which the app could crash and terminate.\
+\
+Another bug concerning the read labels has been fixed.
+\b \
+\
+v1.7.2
+\b0 \
+\
+Fixing a minor bug in cloudcode, you should(!) update your cloudcode with the new version, especially the activity.js file, or you might run into troubles concerning your hashtags.\
+\
+Also fixing a bug concerning the EditProfileViewController, when saving a new email. \
+\
+Another fixed bug is concerning the iPad version, where some actionsheets wouldn\'92t pop up due to deprecations.\
+\
+\
+
+\b v1.7.1
+\b0 \
+\
+Fixing a bug on the simulator, where the camera would automatically pop up when tapping on the new post button.\
+\
+
+\b v1.7\
+\
+
+\b0 several bug fixes: \
+\
+- video playback bug has been fixed\
+- opening profiles from the in-app-messenger was kind of messy - fixed now\
+- opening profiles general did open them on the wrong tab - they open in the right tab now\
+- there has been a bug when searching for hashtags - this has been sorted out and you can now also search for hashtags with the `#` sign\
+- improving the chat in general - it had some weak moments, most of them are gone now\
+- improving the custom caching system, esp. for the use of tweets\
+- other minor design bugs and performance improvements\
+\
+new features:\
+\
+- Recent posts feed - showing you the most recent posts, independent from who you follow\
+- Extended setting features in the settings page - you have now more control over the app, esp. over push notifications and read receipts\
+- Tweets - this update introduces a first version of tweets, limited to 120 signs but with mentions, hashtags and links. Tweets are entered via a custom posting page.\
+- In-app-webview - when opening a link, the user isn\'92t taken to safari anymore. Instead, a custom webview opens, which means that the user can stay in the app and does not have to leave it.\
+\
+In case you notice any bugs, please feel free to report them to me, I will fix them as soon as possible!}

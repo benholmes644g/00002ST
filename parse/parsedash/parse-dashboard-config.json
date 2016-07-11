@@ -1,0 +1,28 @@
+{
+  "apps": [
+    {
+      "serverURL": "http://parseserver-crdwp-env.us-east-1.elasticbeanstalk.com/parse",
+      "appId": "com.sidetone.net",
+      "masterKey": "QWERTYUIOP123456",
+      "appName": "Side Tone AWS v2"
+    },
+    {
+      "serverURL": "http://23.249.163.152:1337/parse",
+      "appId": "com.unanimous.studio",
+      "masterKey": "QWERTYUIOP123456",
+      "appName": "Private Social Dash"
+    },
+    {
+      "serverURL": "http://23.249.163.152:1338/parse",
+      "appId": "com.unanimous.studio",
+      "masterKey": "QWERTYUIOP123456",
+      "appName": "Android Chat UI"
+    }
+  ],
+  "users": [
+    {
+      "user":"testuser",
+      "pass":"123456"
+    }
+  ]
+}
