@@ -42,38 +42,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SocialNetwork/Controllers/Settings/ESShareWithFollowersViewController.m"
-            timestampString = "485394645.298129"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "-filterResults:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SocialNetwork/Controllers/Settings/ESShareWithFollowersViewController.m"
-            timestampString = "485395340.610345"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
-            landmarkName = "-tableView:cellForRowAtIndexPath:object:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SocialNetwork/Controllers/Settings/ESShareWithFollowersViewController.m"
             timestampString = "485395340.610345"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -121,8 +89,8 @@
                   symbolName = "-[ESPhotoDetailsViewController useNotificationWithMentionString:]"
                   moduleName = "SideTone"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Rathore/Documents/development/PrivateSocialNetwork/iOS-release%20copy%202/SocialNetwork/Controllers/Detail/ESPhotoDetailsViewController.m"
-                  timestampString = "489689337.140849"
+                  urlString = "file:///Users/Rathore/Documents/development/sidetone/iOS-release%20copy%202/SocialNetwork/Controllers/Detail/ESPhotoDetailsViewController.m"
+                  timestampString = "490543638.873243"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "1692"
@@ -136,8 +104,8 @@
                   symbolName = "__65-[ESPhotoDetailsViewController useNotificationWithMentionString:]_block_invoke"
                   moduleName = "SideTone"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Rathore/Documents/development/PrivateSocialNetwork/iOS-release%20copy%202/SocialNetwork/Controllers/Detail/ESPhotoDetailsViewController.m"
-                  timestampString = "489689337.141018"
+                  urlString = "file:///Users/Rathore/Documents/development/sidetone/iOS-release%20copy%202/SocialNetwork/Controllers/Detail/ESPhotoDetailsViewController.m"
+                  timestampString = "490543638.873374"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "1693"
@@ -314,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SocialNetwork/AppDelegate.m"
-            timestampString = "488281728.219883"
+            timestampString = "490523823.5667"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "340"
-            endingLineNumber = "340"
+            startingLineNumber = "341"
+            endingLineNumber = "341"
             landmarkName = "-applicationWillTerminate:"
             landmarkType = "5">
          </BreakpointContent>
@@ -330,12 +298,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SocialNetwork/Controllers/Take Photo/ESEditPhotoViewController.m"
-            timestampString = "488385713.264885"
+            timestampString = "490543637.779763"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "324"
-            endingLineNumber = "324"
+            startingLineNumber = "326"
+            endingLineNumber = "326"
             landmarkName = "-snapshotAction:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SocialNetwork/Controllers/Activity/ESActivityFeedViewController.m"
+            timestampString = "490529059.991244"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SocialNetwork/Controllers/Activity/ESActivityFeedViewController.m"
+            timestampString = "490529294.448753"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "-tableView:heightForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SocialNetwork/Controllers/Activity/ESActivityFeedViewController.m"
+            timestampString = "490529299.020171"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "-tableView:heightForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

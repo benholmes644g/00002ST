@@ -9,17 +9,18 @@
 #import "STParseHelper.h"
  @implementation STParseHelper
 
-@synthesize toUser,fromUser,final,fetching,blockList,unreadCount,lastrefresh;
+@synthesize toUser,fromUser,final,fetching,blockList,unreadCount,lastrefresh,refActivity;
 
 +(STParseHelper *)sharedInstance{
 
     static STParseHelper *sharedInstance = nil;
     @synchronized(self) {
-        if (sharedInstance == nil)
+        if (sharedInstance == nil){
             
             sharedInstance = [[self alloc] init];
         sharedInstance.fetching = NO;
-        sharedInstance.unreadCount=0;
+            sharedInstance.unreadCount=0;
+        }
     }
     return sharedInstance;
 
@@ -27,7 +28,7 @@
 }
 
 -(void)pullSharedPhotodata{
-    [self performSelectorInBackground:@selector(parseUser) withObject:nil];
+     [self performSelectorInBackground:@selector(parseUser) withObject:nil];
  }
 
 -(void)parseUser{
@@ -38,6 +39,7 @@
         self.fetching = YES;
         self.unreadCount=0;
     }
+    if(!willUpdateData){
     if (![PFUser currentUser]) {
         PFQuery *query = [PFQuery queryWithClassName:kESActivityClassKey];
         [query setLimit:0];
@@ -70,10 +72,118 @@
         }
     }];
     
-    
+    }else{
+    // instead update record
+        
+        [self sidetoneSentToUser];
+    }
 
 }
+-(void)sidetoneSentToUser{
+    if (![PFUser currentUser]) {
+        PFQuery *query = [PFQuery queryWithClassName:kESActivityClassKey];
+        [query setLimit:0];
+        //query;
+    }
+    
+    
+    PFQuery *query = [PFQuery queryWithClassName:kESActivityClassKey];
+    [query whereKey:kESActivityToUserKey equalTo:[PFUser currentUser]];
+    [query whereKey:kESActivityFromUserKey notEqualTo:[PFUser currentUser]];
+    [query whereKey:kESActivityTypeKey equalTo:kESActivityTypeShare];
+    [query whereKeyExists:kESActivityFromUserKey];
+    [query whereKeyExists:kESActivityPhotoKey];
+    [query whereKey:@"updatedAt" greaterThan:self.lastrefresh];
+    [query orderByDescending:@"createdAt"];
+    
+    
+    [query setCachePolicy:kPFCachePolicyNetworkOnly];
+    
+    
+    
+    
+    //[query_ setCachePolicy:kPFCachePolicyNetworkOnly];
+    
+    //PFQuery *joint = [PFQuery orQueryWithSubqueries:[NSArray arrayWithObjects: query,query_, nil]];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            [self sidetoneSentFromUser:objects];
+            
+        }
+    }];
 
+
+}
+-(void)sidetoneSentFromUser:(NSArray *)objectstouser{
+    // get objectsfromuser
+    PFQuery *query_= [PFQuery queryWithClassName:kESActivityClassKey];
+    [query_ whereKey:kESActivityToUserKey notEqualTo:[PFUser currentUser]];
+    [query_ whereKey:kESActivityFromUserKey equalTo:[PFUser currentUser]];
+    [query_ whereKey:kESActivityTypeKey equalTo:kESActivityTypeShare];
+    [query_ whereKeyExists:kESActivityToUserKey];
+    [query_ whereKeyExists:kESActivityPhotoKey];
+    [query_ whereKey:@"updatedAt" greaterThan:self.lastrefresh];
+
+    [query_ orderByDescending:@"createdAt"];
+    [query_ setCachePolicy:kPFCachePolicyNetworkOnly];
+    
+    
+    
+    
+    
+    [query_ findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            
+            //  BOOL done=NO;
+            //[self fromUser:objects];
+            self.lastrefresh = [NSDate date];
+            [[NSUserDefaults standardUserDefaults] setObject:self.lastrefresh forKey:kESUserDefaultsActivityFeedViewControllerLastRefreshKey];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            [self filterArray:[self distinctUserShares:objectstouser isSender:NO] toUser:NO];
+           // self.toUser = [self distinctUserShares:objectstouser isSender:NO];
+          //  self.fromUser = [self distinctUserShares:objects isSender:YES];
+            [self filterArray:[self distinctUserShares:objects isSender:NO] toUser:YES];
+
+            // BOOL done=NO;
+           [self swaparrays];
+            self.fetching =NO;
+            [self fetchObjects];
+            
+        }
+    }];
+    
+}
+-(void)filterArray:(NSMutableArray *)array toUser:(BOOL)sender{
+    if(sender){
+    
+        for (PFObject *activity in array) {
+        
+            if([self.fromUser containsObject:activity]){
+            }else{
+            
+                [self.fromUser addObject:activity];
+            }
+        
+        }
+
+        // add to from user
+    }else{
+    
+        for (PFObject *activity in array) {
+            
+            if([self.toUser containsObject:activity]){
+            }else{
+                
+                [self.toUser addObject:activity];
+            }
+            
+        }
+
+    //add to to user
+    }
+
+}
 -(void)fromUser:(NSArray *)objectstouser{
 // get objectsfromuser
     PFQuery *query_= [PFQuery queryWithClassName:kESActivityClassKey];
@@ -102,10 +212,49 @@
             // BOOL done=NO;
 [self swaparrays];
             self.fetching =NO;
+            [self fetchObjects];
 
         }
     }];
     
+}
+-(void)fetchObjects{
+
+    for (PFObject *activity in self.toUser) {
+        PFObject *obj1 = [activity objectForKey:kESActivityFromUserKey];
+        if(![obj1 isDataAvailable]){
+        [obj1 fetch];
+        }
+        PFObject *obj2 = [activity objectForKey:kESActivityPhotoKey];
+        if(![obj2 isDataAvailable]){
+            [obj2 fetch];
+        }
+      //  [[activity objectForKey:kESActivityToUserKey] fetch];
+
+       // [[activity objectForKey:kESActivityPhotoKey] fetch];
+
+    }
+    for (PFObject *activity in self.fromUser) {
+        PFObject *obj1 = [activity objectForKey:kESActivityToUserKey];
+        if(![obj1 isDataAvailable]){
+            [obj1 fetch];
+        }
+        PFObject *obj2 = [activity objectForKey:kESActivityPhotoKey];
+        if(![obj2 isDataAvailable]){
+            [obj2 fetch];
+        }
+       // [[activity objectForKey:kESActivityFromUserKey] fetch];
+//        [[activity objectForKey:kESActivityToUserKey] fetch];
+//        
+//        [[activity objectForKey:kESActivityPhotoKey] fetch];
+        
+    }
+
+    
+    [refActivity tryLoadingData];
+    willUpdateData = YES;
+    
+
 }
 -(void)swaparrays{
     
@@ -156,25 +305,26 @@
     
     NSMutableArray *tempObject = [NSMutableArray arrayWithArray:[objects copy]];
     for (PFObject *activity in tempObject) {
-        [activity fetchIfNeeded];
+       // [activity fetchIfNeeded];
         
         // if ([lastRefresh compare:[activity createdAt]] == NSOrderedAscending && ![[activity objectForKey:kESActivityTypeKey] isEqualToString:kESActivityTypeJoined]) {
       //  BOOL willAddObject = true;
         PFUser *user = [activity objectForKey:sortKey];
         PFUser *user_ = [activity objectForKey:sortKeyR];
         PFObject *photo = [activity objectForKey:kESActivityPhotoKey];
-        [user fetchIfNeeded];
+        //[user fetchInBackgroundWithBlock:nil];
         if([temp count] <1){
             
             [temp addObject:[user objectId]];
-          [user_ fetchIfNeeded];
-           [photo fetchIfNeeded];
+           // [user_ fetchInBackgroundWithBlock:nil];
+          // [photo fetchInBackgroundWithBlock:nil];
             if(![self.blockList containsObject:[user objectId]])
             { [result addObject:activity];}
             
             if ([self.lastrefresh compare:[activity createdAt]] == NSOrderedAscending && ![[activity objectForKey:kESActivityTypeKey] isEqualToString:kESActivityTypeJoined]) {
-                self.unreadCount++;
             }
+            self.unreadCount++;
+
             NSLog(@"********ADD OBJECT %@",[user objectId]);
         }else{
             
@@ -183,13 +333,15 @@
                 
             }else{
                 [temp addObject:[user objectId]];
-                [user_ fetchIfNeeded];
-                [photo fetchIfNeeded];
+//                [user_ fetchInBackgroundWithBlock:nil];
+//                [photo fetchInBackgroundWithBlock:nil];
                 if(![self.blockList containsObject:[user objectId]])
                     [result  addObject:activity];
+                self.unreadCount++;
+
                 NSLog(@"********ADD OBJECT");
                 if ([self.lastrefresh compare:[activity createdAt]] == NSOrderedAscending && ![[activity objectForKey:kESActivityTypeKey] isEqualToString:kESActivityTypeShare]) {
-                    self.unreadCount++;
+                 //   self.unreadCount++;
                 }
                 
             }

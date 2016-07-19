@@ -494,7 +494,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				ONLY_ACTIVE_ARCH = YES;
 				PARSE_DIR = "$(PROJECT_DIR)/..";
-				PROVISIONING_PROFILE = "15756616-487f-4c71-9f8a-65b67bc890d8";
+				PROVISIONING_PROFILE = "525b310b-278b-4d34-95ca-126da46b963b";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -515,7 +515,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mithramedia.sidetone;
-				PROVISIONING_PROFILE = "15756616-487f-4c71-9f8a-65b67bc890d8";
+				PROVISIONING_PROFILE = "525b310b-278b-4d34-95ca-126da46b963b";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Parse-iOS/** $(SRCROOT)/Parse-iOS $(SRCROOT)/Frameworks /Users/Rathore/Documents/development/PrivateSocialNetwork/iOS/SocialNetwork/Parse-iOS/**";
@@ -538,7 +538,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mithramedia.sidetone;
-				PROVISIONING_PROFILE = "15756616-487f-4c71-9f8a-65b67bc890d8";
+				PROVISIONING_PROFILE = "525b310b-278b-4d34-95ca-126da46b963b";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Parse-iOS/** $(SRCROOT)/Parse-iOS $(SRCROOT)/Frameworks /Users/Rathore/Documents/development/PrivateSocialNetwork/iOS/SocialNetwork/Parse-iOS/**";
@@ -554,7 +554,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				ONLY_ACTIVE_ARCH = YES;
 				PARSE_DIR = "$(PROJECT_DIR)/..";
-				PROVISIONING_PROFILE = "15756616-487f-4c71-9f8a-65b67bc890d8";
+				PROVISIONING_PROFILE = "525b310b-278b-4d34-95ca-126da46b963b";
 				SDKROOT = iphoneos;
 			};
 			name = Release;

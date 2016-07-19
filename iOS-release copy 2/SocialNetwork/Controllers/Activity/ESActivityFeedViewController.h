@@ -64,5 +64,6 @@
  *  The invite friends cell has been tapped, thus we open the InviteFriendsViewController.
  */
 - (void)inviteFriendsButtonAction:(id)sender;
+-(void)tryLoadingData;
 
 @end

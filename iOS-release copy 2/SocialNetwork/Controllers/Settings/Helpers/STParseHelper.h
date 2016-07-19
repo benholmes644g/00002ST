@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "AppDelegate.h"
+#import "ESActivityFeedViewController.h"
+@class ESActivityFeedViewController;
 @interface STParseHelper : NSObject{
-
+    BOOL willUpdateData;
+ 
 }
 @property (nonatomic , retain)    NSMutableArray *final;
+@property (nonatomic , retain) ESActivityFeedViewController *refActivity;
 
 @property (nonatomic , retain)    NSMutableArray *toUser;
 @property (nonatomic , retain)    NSMutableArray *blockList;

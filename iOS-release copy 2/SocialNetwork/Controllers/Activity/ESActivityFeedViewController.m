@@ -55,9 +55,10 @@ static STParseHelper *myInstance;
 }
 
 -(void)tryLoadingData{
-
+//[self loadTableView];
+  //  return;
     if(myInstance.fetching){
-        double delayInSeconds = 1.0;
+        double delayInSeconds = 2.0;
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
         dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                        ^(void){
@@ -88,6 +89,7 @@ static STParseHelper *myInstance;
 
     [super viewDidLoad];
     myInstance = [STParseHelper sharedInstance];
+    myInstance.refActivity = self;
      [myInstance pullSharedPhotodata];
     UIView *texturedBackgroundView = [[UIView alloc] initWithFrame:self.view.bounds];
     [texturedBackgroundView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"BackgroundLeather"]]];
@@ -106,7 +108,7 @@ static STParseHelper *myInstance;
     [self.blankTimelineView addSubview:button];
     
     lastRefresh = [[NSUserDefaults standardUserDefaults] objectForKey:kESUserDefaultsActivityFeedViewControllerLastRefreshKey];
-    [self tryLoadingData];
+   // [self tryLoadingData];
     
 }
 -(void)tapBtn {
@@ -346,7 +348,7 @@ static STParseHelper *myInstance;
     
     if(myInstance.fetching){
     }else{
-        unreadCount = myInstance.unreadCount;//[myInstance.fromUser count] + [myInstance.toUser count];
+        unreadCount =0;//= myInstance.unreadCount;//[myInstance.fromUser count] + [myInstance.toUser count];
         self.lastRefresh =myInstance.lastrefresh;
         [self.dataset removeAllObjects];
         [self.dataset_ removeAllObjects];

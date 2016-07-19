@@ -156,7 +156,9 @@ UIViewAutoresizingFlexibleTopMargin
 //    VLDContextSheetItem *item4 = [[VLDContextSheetItem alloc] initWithTitle: @"Close"
 //                                                                      image: [UIImage imageNamed: @"pin4"]
 //                                                           highlightedImage: [UIImage imageNamed: @"pin4"]];
-    self.contextSheet = [[VLDContextSheet alloc] initWithItems: @[ item1, item2, item3,item4,item5,item6 ]];
+   // self.contextSheet = [[VLDContextSheet alloc] initWithItems: @[ item1, item2, item3,item4,item5,item6 ]];
+    self.contextSheet = [[VLDContextSheet alloc] initWithItems: @[ item1, item2, item3 ]];
+
  
     [self.contextSheet setDelegate:self];
 }
