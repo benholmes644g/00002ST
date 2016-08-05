@@ -400,6 +400,7 @@ BOOL monster = NO;
 - (void)newHashtagSearch {
     ESSearchHashtagTableViewController *privateview = [[ESSearchHashtagTableViewController alloc] initWithNibName:nil bundle:nil];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:privateview];
+    privateview.dataList=self.objectsData;
     [self presentViewController:navController animated:YES completion:nil];
 }
 - (NSIndexPath *)_indexPathForPaginationCell {

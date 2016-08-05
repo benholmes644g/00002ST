@@ -390,7 +390,7 @@
 				ORGANIZATIONNAME = "Parse, LLC";
 				TargetAttributes = {
 					D2AAC07D0554694100DB518D = {
-						DevelopmentTeam = NWS8H65LEK;
+						DevelopmentTeam = K3WF98ZUSJ;
 					};
 				};
 			};
@@ -489,12 +489,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8178BEA61B716BF300051CF4 /* Release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mithra Media (NWS8H65LEK)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Samuel Long (K3WF98ZUSJ)";
 				ENABLE_BITCODE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				ONLY_ACTIVE_ARCH = YES;
 				PARSE_DIR = "$(PROJECT_DIR)/..";
-				PROVISIONING_PROFILE = "525b310b-278b-4d34-95ca-126da46b963b";
+				PROVISIONING_PROFILE = "0bf3f6d3-90b4-45d3-881a-0844fc0ef652";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -505,7 +505,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APPLICATION_EXTENSION_API_ONLY = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mithra Media (NWS8H65LEK)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Samuel Long (K3WF98ZUSJ)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -514,8 +514,8 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mithramedia.sidetone;
-				PROVISIONING_PROFILE = "525b310b-278b-4d34-95ca-126da46b963b";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sidetone.net;
+				PROVISIONING_PROFILE = "0bf3f6d3-90b4-45d3-881a-0844fc0ef652";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Parse-iOS/** $(SRCROOT)/Parse-iOS $(SRCROOT)/Frameworks /Users/Rathore/Documents/development/PrivateSocialNetwork/iOS/SocialNetwork/Parse-iOS/**";
@@ -528,7 +528,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APPLICATION_EXTENSION_API_ONLY = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mithra Media (NWS8H65LEK)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Samuel Long (K3WF98ZUSJ)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -537,8 +537,8 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mithramedia.sidetone;
-				PROVISIONING_PROFILE = "525b310b-278b-4d34-95ca-126da46b963b";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sidetone.net;
+				PROVISIONING_PROFILE = "0bf3f6d3-90b4-45d3-881a-0844fc0ef652";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Parse-iOS/** $(SRCROOT)/Parse-iOS $(SRCROOT)/Frameworks /Users/Rathore/Documents/development/PrivateSocialNetwork/iOS/SocialNetwork/Parse-iOS/**";
@@ -549,12 +549,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8178BEA61B716BF300051CF4 /* Release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mithra Media (NWS8H65LEK)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Samuel Long (K3WF98ZUSJ)";
 				ENABLE_BITCODE = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				ONLY_ACTIVE_ARCH = YES;
 				PARSE_DIR = "$(PROJECT_DIR)/..";
-				PROVISIONING_PROFILE = "525b310b-278b-4d34-95ca-126da46b963b";
+				PROVISIONING_PROFILE = "0bf3f6d3-90b4-45d3-881a-0844fc0ef652";
 				SDKROOT = iphoneos;
 			};
 			name = Release;

@@ -122,12 +122,12 @@
        // configuration.
        // configuration.localDatastoreEnabled = YES;
 
-        configuration.applicationId = @"com.sidetone.net";
+        //configuration.applicationId = @"com.sidetone.net";
+        //configuration.clientKey = @" ";
+       // configuration.server = @"http://parseserver-crdwp-env.us-east-1.elasticbeanstalk.com/parse";
+        configuration.applicationId = @"com.unanimous.studio";
         configuration.clientKey = @" ";
-        configuration.server = @"http://parseserver-crdwp-env.us-east-1.elasticbeanstalk.com/parse";
-//        configuration.applicationId = @"com.unanimous.studio";
-//        configuration.clientKey = @" ";
-//        configuration.server = @"http://23.249.163.152:1337/parse";
+        configuration.server = @"http://23.249.163.152:1337/parse";
     }]];
     //[Parse isLocalDatastoreEnabled];
    // [PFFacebookUtils initialize];

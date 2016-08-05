@@ -129,6 +129,7 @@ CGFloat const distance_W_LabelHeader = 35.0;
 }
 - (void)newHashtagSearch {
     ESSearchHashtagTableViewController *privateview = [[ESSearchHashtagTableViewController alloc] initWithNibName:nil bundle:nil];
+    privateview.dataList = [NSMutableArray arrayWithArray:self.objects];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:privateview];
     [self presentViewController:navController animated:YES completion:nil];
 }

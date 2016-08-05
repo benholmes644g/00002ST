@@ -2968,7 +2968,7 @@
 				TargetAttributes = {
 					222170681B0393B3008BE836 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = NWS8H65LEK;
+						DevelopmentTeam = K3WF98ZUSJ;
 					};
 				};
 			};
@@ -3599,8 +3599,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mithra Media (NWS8H65LEK)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mithra Media (NWS8H65LEK)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Samuel Long (K3WF98ZUSJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Samuel Long (K3WF98ZUSJ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -3638,7 +3638,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
-				PROVISIONING_PROFILE = "525b310b-278b-4d34-95ca-126da46b963b";
+				PROVISIONING_PROFILE = "0bf3f6d3-90b4-45d3-881a-0844fc0ef652";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				WARNING_CFLAGS = "-Wno-objc-property-synthesis";
@@ -3663,8 +3663,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mithra Media (NWS8H65LEK)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mithra Media (NWS8H65LEK)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Samuel Long (K3WF98ZUSJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Samuel Long (K3WF98ZUSJ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -3695,7 +3695,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
-				PROVISIONING_PROFILE = "525b310b-278b-4d34-95ca-126da46b963b";
+				PROVISIONING_PROFILE = "0bf3f6d3-90b4-45d3-881a-0844fc0ef652";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
@@ -3708,7 +3708,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mithra Media (NWS8H65LEK)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Samuel Long (K3WF98ZUSJ)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3736,9 +3736,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mithramedia.sidetone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sidetone.net;
 				PRODUCT_NAME = SideTone;
-				PROVISIONING_PROFILE = "525b310b-278b-4d34-95ca-126da46b963b";
+				PROVISIONING_PROFILE = "0bf3f6d3-90b4-45d3-881a-0844fc0ef652";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3750,7 +3750,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mithra Media (NWS8H65LEK)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Samuel Long (K3WF98ZUSJ)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3778,9 +3778,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mithramedia.sidetone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sidetone.net;
 				PRODUCT_NAME = SideTone;
-				PROVISIONING_PROFILE = "525b310b-278b-4d34-95ca-126da46b963b";
+				PROVISIONING_PROFILE = "0bf3f6d3-90b4-45d3-881a-0844fc0ef652";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

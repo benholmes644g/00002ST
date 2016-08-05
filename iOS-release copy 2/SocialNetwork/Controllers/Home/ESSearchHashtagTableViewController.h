@@ -10,5 +10,10 @@
 
 @interface ESSearchHashtagTableViewController : UITableViewController <UISearchBarDelegate, UIAlertViewDelegate>
 
+{
+    int count;
+}
+@property (nonatomic,retain)NSMutableArray  *dataList;
+@property (nonatomic,retain)NSMutableArray  *searchResult;
 
 @end
